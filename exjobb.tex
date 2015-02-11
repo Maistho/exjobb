@@ -3,22 +3,14 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[swedish,english]{babel}
-% Use this command to override the default ACM copyright statement (e.g. for preprints).
-% Consult the conference website for the camera-ready copyright statement.
 
-
-%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
-% \toappear{Permission to make digital or hard copies of all or part of this work for personal or classroom use is 	granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
-% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
-% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
-% DOI string from ACM form confirmation}
-%% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+% Copyright statement
 \toappear{Permission is granted to do whatever}
 
 
 % Arabic page numbers for submission.
 % Remove this line to eliminate page numbers for the camera ready copy
-% \pagenumbering{arabic}
+\pagenumbering{arabic}
 
 
 % Load basic packages
@@ -27,7 +19,7 @@
 \usepackage{times}    % comment if you want LaTeX's default font
 \usepackage{url}      % llt: nicely formatted URLs
 
-% llt: Define a global style for URLs, rather that the default one
+% llt: Define a global style for URLs, rather than the default one
 \makeatletter
 \def\url@leostyle{%
   \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
@@ -87,32 +79,26 @@ breaklinks=true,
 Planning poker is a technique for estimating the time required for tasks
 within a programming project, which tries to eliminate certain biases of
 the participants in order to achieve greater accuracy of the estimates\cite{grenning2002planning}.
-This study aims to examine the effecs of using Planning Poker within a project on the quality of code produced.
-This study aims to examine the participants perception of two different
-methods for time estimation, and compare them to each other.
+This study aims to examine the effects of using Planning Poker within a project on the quality of code produced.
 \end{abstract}
 
 \keywords{
-	Guides; instructions; author's kit; conference publications;
+    Planning Poker; Code Quality; Agile
 }
 
-\category{H.5.m.}{Information Interfaces and Presentation (e.g. HCI)}{Miscellaneous}
-
-See: \url{http://www.acm.org/about/class/1998/}
-for more information and the full list of ACM classifiers
-and descriptors. \newline
-\textcolor{red}{Optional section to be included in your final version,
-but strongly encouraged. On the submission page only the classifiers’
-letter-number combination will need to be entered.}
-
 \section{Introduction}
-Within agile development it has become more and more important to have accurate time estimates. There has been some studies on the accuracy of estimates, where planning poker has been found to possibly increase the accuracy of estimates\cite{molokken2007combining}.
-But accuracy is not the only measurement by which an estimation technique can be valued. Other factors, such as group "togetherness" can affect "something".\cite{wellington2005examining}, That's why we want to examine what other factors that affect participants experience of Planning Poker.
+Within agile development, a lot of factors come in to play when managing a project. One major factor is the use of user stories for planning the project.
+Within agile development it has become more and more important to have accurate time estimates.
+There has been some studies on the accuracy of estimates, where planning poker has been found to
+possibly increase the accuracy of estimates\cite{molokken2007combining}.
+
+In Agile development, Planning Poker isn't rated as one of the most important aspects\cite{Williams:2012:ATT:2133806.2133823}, and we ask ourselves why? Could developers perhaps not see the, perhaps hidden, beneficial aspects of Planning Poker, or is it simply so that developers dislike using Planning Poker?
+We will therefore try to explore the possibly hidden benefits of using Planning Poker.
 
 
 \section{Purpose}
 
-This study will examine Planning Poker as a method to estimate time required for tasks within a programming project. It is to be investigated especcialy how the test participants experience the method, but also how the estimates compare to other methods.
+This study will examine Planning Poker as a method to estimate time required for tasks within a programming project. It is to be investigated especially how the test participants experience the method, but also how the estimates compare to other methods.
 
 \section{Research questions}
 We want to examine:
@@ -129,22 +115,46 @@ The study will only involve two different methods of time estimation.
 The study only involves one group of programmers.
 
 \section{Background and related works}
-There are…
+In order to explore the relationship between the use of planning poker and code quality, we first need to define both concepts.
 
 \subsection{Planning Poker}
-Planning Poker was first introduced as a time estimation technique by James Grenning in year.\cite{grenning2002planning}
+Planning Poker was first introduced as a time estimation technique by James Grenning in [year] \cite{grenning2002planning}.
+Grenning suggests that using less precise estimates and actively involve all programmers would
+decrease time spent on estimation, and give more accurate estimates. The concept has since been
+explored in several other projects and has been found to contribute to an increased accuracy of
+estimates\cite{Mahni20122086,1667560}.
+
+Planning poker has been suggested to have other benefits apart from accurate estimations, such as increased knowledge sharing and programmer enjoyment\cite{molokken2008using}. Use of Planning Poker has also been speculated to increase the quality of code produced\cite{molokken2007combining}. 
 
 \subsection{Code Quality}
-In order to perform software quality measurement, we will need some sort of explored standard. The ISO/IEC 25010:2011 defines a quality in use model composed of five characteristics,\cite{iso250102011} which we will use to analyse the quality of our code.
+In order to perform software quality measurement, we will need some sort of explored standard.
+The ISO/IEC 25010:2011 defines a quality in use model composed of eight characteristics\cite{iso250102011},
+which we will use to analyse the quality of our code:
+\begin{itemize}
+\setlength{\itemsep}{0.25em}
+\item functional suitability
+\item reliability
+\item performance efficiency
+\item usability
+\item security
+\item compatibility
+\item maintainability
+\item portability
+\end{itemize}
 
+Agile teams often find the use of automated tools for code quality assurance important\cite{Williams:2012:ATT:2133806.2133823}, and we will try to evaluate how we can incorporate that into our testing\cite{ala2005survey}.
+
+\section{Method}
+
+We will try to make use of stuff like code reviews to measure the Code Quality.
 
 \section{Conclusion}
 
-Our conclusion
+Our conclusion is that...
 
-\section{Acknowledgments}
+\section{Acknowledgements}
 
-Thanks to all of IP
+Thanks to the team at Briteback for allowing us to use them as Guinea Pigs.
 
 % Balancing columns in a ref list is a bit of a pain because you
 % either use a hack like flushend or balance, or manually insert

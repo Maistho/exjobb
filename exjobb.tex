@@ -1,5 +1,8 @@
 \documentclass{sigchi}
-
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[swedish,english]{babel}
 % Use this command to override the default ACM copyright statement (e.g. for preprints).
 % Consult the conference website for the camera-ready copyright statement.
 
@@ -10,6 +13,7 @@
 % Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
 % DOI string from ACM form confirmation}
 %% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+\toappear{Permission is granted to do whatever}
 
 
 % Arabic page numbers for submission.
@@ -45,9 +49,9 @@
 % since its job is to redefine many LaTeX commands.
 \usepackage[pdftex]{hyperref}
 \hypersetup{
-pdftitle={SIGCHI Conference Proceedings Format},
+pdftitle={The effects of using Planning Poker on Code Quality},
 pdfauthor={LaTeX},
-pdfkeywords={SIGCHI, proceedings, archival format},
+pdfkeywords={Planning Poker, Code Quality, Agile},
 bookmarksnumbered,
 pdfstartview={FitH},
 colorlinks,
@@ -65,20 +69,16 @@ breaklinks=true,
 % End of preamble. Here it comes the document.
 \begin{document}
 
-\title{SIGCHI Conference Proceedings Format}
+\title{The effects of using Planning Poker on Code Quality}
 
-\numberofauthors{3}
+\numberofauthors{2}
 \author{
   \alignauthor Gustav Bylund\\
-    \affaddr{Affiliation}\\
-    \affaddr{Address}\\
-    \email{e-mail address}\\
-    \affaddr{Optional phone number}
+  \affaddr{IDA, Linkoping University}\\
+    \email{gustav.bylund@liu.se}\\
   \alignauthor Filip Lindman Marko\\
-    \affaddr{Affiliation}\\
-    \affaddr{Address}\\
-    \email{e-mail address}\\
-    \affaddr{Optional phone number}
+    \affaddr{IDA, Linkoping University}\\
+    \email{filip.lindman.marko@liu.se}\\
 }
 
 \maketitle
@@ -86,7 +86,8 @@ breaklinks=true,
 \begin{abstract}
 Planning poker is a technique for estimating the time required for tasks
 within a programming project, which tries to eliminate certain biases of
-the participants in order to achieve greater accuracy of the estimates. \cite{grenning2002planning}
+the participants in order to achieve greater accuracy of the estimates\cite{grenning2002planning}.
+This study aims to examine the effecs of using Planning Poker within a project on the quality of code produced.
 This study aims to examine the participants perception of two different
 methods for time estimation, and compare them to each other.
 \end{abstract}
@@ -105,15 +106,15 @@ but strongly encouraged. On the submission page only the classifiers’
 letter-number combination will need to be entered.}
 
 \section{Introduction}
-Within agile development it has become more and more important to have accurate time estimates. There has been some studies on the accuracy of estimates, where planning poker has been found to possibly increase the accuracy of estimates. \cite{molokken2007combining}
+Within agile development it has become more and more important to have accurate time estimates. There has been some studies on the accuracy of estimates, where planning poker has been found to possibly increase the accuracy of estimates\cite{molokken2007combining}.
 But accuracy is not the only measurement by which an estimation technique can be valued. Other factors, such as group "togetherness" can affect "something".\cite{wellington2005examining}, That's why we want to examine what other factors that affect participants experience of Planning Poker.
 
 
 \section{Purpose}
 
-This study  will examine Planning Poker as a method to estimate time required for tasks within a programming project. It is to be investigated especcialy how the test participants experience the method, but also how the estimates compare to other methods.
+This study will examine Planning Poker as a method to estimate time required for tasks within a programming project. It is to be investigated especcialy how the test participants experience the method, but also how the estimates compare to other methods.
 
-\section{Questions}
+\section{Research questions}
 We want to examine:
 \begin{itemize}
 		\item Precision of estimates
@@ -129,6 +130,12 @@ The study only involves one group of programmers.
 
 \section{Background and related works}
 There are…
+
+\subsection{Planning Poker}
+Planning Poker was first introduced as a time estimation technique by James Grenning in year.\cite{grenning2002planning}
+
+\subsection{Code Quality}
+In order to perform software quality measurement, we will need some sort of explored standard. The ISO/IEC 25010:2011 defines a quality in use model composed of five characteristics,\cite{iso250102011} which we will use to analyse the quality of our code.
 
 
 \section{Conclusion}

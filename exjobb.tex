@@ -75,11 +75,13 @@ breaklinks=true,
 
 \maketitle
 
+
 \begin{abstract}
-Planning poker is a technique for estimating the time required for tasks
-within a programming project, which tries to eliminate certain biases of
-the participants in order to achieve greater accuracy of the estimates\cite{grenning2002planning}.
-This study aims to examine the effects of using Planning Poker within a project on the quality of code produced.
+Planning poker is a technique for estimating the effort required for tasks
+within a programming project. It aims to eliminate certain biases of
+the participants in order to achieve greater accuracy of estimates\cite{grenning2002planning}.
+
+There is a lack of knowledge regarding how Planning Poker affects other aspects of development. This study aims to examine the effects of using Planning Poker within a project on the quality of code produced.
 \end{abstract}
 
 \keywords{
@@ -87,50 +89,45 @@ This study aims to examine the effects of using Planning Poker within a project 
 }
 
 \section{Introduction}
-Within agile development, a lot of factors come in to play when managing a project. One major factor is the use of user stories for planning the project.
-Within agile development it has become more and more important to have accurate time estimates.
-There has been some studies on the accuracy of estimates, where planning poker has been found to
-possibly increase the accuracy of estimates\cite{molokken2007combining}.
+In order to estimate the workload  that a development group can take on, the use of a good effort estimation technique is required. Planning poker is a well-known practice within agile development \cite{cohn2005agile}. There has been some studies on the accuracy of estimates, where planning poker has been found to possibly contribute to an increased accuracy of estimates \cite{molokken2008using,Mahni20122086,1667560}.
 
-Planning Poker isn't rated as one of the most important aspects of agile development\cite{Williams:2012:ATT:2133806.2133823}, and we ask ourselves why? Could developers not see the, perhaps hidden, beneficial aspects of Planning Poker, or is it simply so that developers dislike using Planning Poker?
-We will therefore try to explore the possibly hidden benefits of using Planning Poker.
-
+Research has also shown that Planning Poker might also affect other aspects of development. Moløkken-Østvold suggested that the use of Planning Poker might impact Code Quality and programmer enjoyment \cite{molokken2008using}.
 
 \section{Purpose}
+There are still unexplored possible benefits of using Planning Poker in projects.
+This study attempts to examine Planning Poker from a different perspective, evaluating the technique using other metrics than just estimate accuracy. An area of special interest is how the test participants experience the method.
 
-This study will examine Planning Poker as a method to estimate time required for tasks within a programming project. It is to be investigated especially how the test participants experience the method, but also how the estimates compare to other methods.
-
-\section{Research questions}
+\subsection{Research questions}
 \begin{enumerate}
 	\item How is code quality affected by using Planning Poker within a project?
 	\item How do participants experience code quality changes from using Planning Poker?
 
-	\item How accurate is the estimates of Planning Poker compared to <insert other method here>
+	\item How accurate is the estimates of Planning Poker compared to Expert Estimates?
 
 \end{enumerate}
 
 \section{Limitations}
-The study will only involve two different methods of time estimation.
+The study covers only two different effort estimation techniques.
+The study only involves one group of developers.
 
-The study only involves one group of programmers.
+\section{Background}
+Briteback is medium-sized startup developing a web service for handling E-mail and internal company communication \cite{Briteback}. During our study, around X developers worked with the project.
+The primary development method used at Briteback is Scrum. Scrum is built upon using sprints and dividing the project tasks into user stories\cite{jongerius2014get}. A sprint is a unit of time, during which a portion of the development is carried out. A user story is a more or less independent part of a project. In the start of each sprint, all user stories for that sprint are effort estimated and assigned to the responsible developer.
 
-\section{Background and related works}
-In order to explore the relationship between the use of planning poker and code quality, we first need to define both concepts.
+\section{Related works}
+In order to explore the relationship between the use of planning poker and code quality, we first need to define both concepts. This section aims to explain the concept of Planning Poker and Code Quality, as defined by others.
 
 \subsection{Planning Poker}
-Planning Poker was first introduced as a time estimation technique by James Grenning in [year] \cite{grenning2002planning}.
-Grenning suggests that using less precise estimates and actively involve all programmers would
-decrease time spent on estimation, and give more accurate estimates. The concept has since been
-explored in several other projects and has been found to contribute to an increased accuracy of
-estimates\cite{Mahni20122086,1667560}.
+Planning Poker was first introduced as a effort estimation technique by James Grenning in 2002 \cite{grenning2002planning}.
+Grenning suggests that using less precise estimates and actively involve all developers would
+decrease time spent on estimation, and give more accurate estimates. The concept has since been explored in several other projects and has been found to contribute to an increased accuracy of estimates \cite{Mahni20122086,1667560}.
 
-Planning poker has been suggested to have other benefits apart from accurate estimations, such as increased knowledge sharing and programmer enjoyment\cite{molokken2008using}. Use of Planning Poker has also been speculated to increase the quality of code produced\cite{molokken2007combining}.
+Planning poker has been suggested to have other benefits apart from accurate estimations, such as increased knowledge sharing and programmer enjoyment. Use of Planning Poker has also been speculated to increase the quality of code produced \cite{molokken2008using}.
 
 \subsection{Code Quality}
 Code Quality is a common name given to the measurement of software quality.
 In order to perform software quality measurement, we will need some sort of explored standard.
-The ISO/IEC 25010:2011 defines a quality in use model composed of eight characteristics\cite{iso250102011},
-which we will use to analyse the quality of our code:
+The ISO/IEC 25010:2011 defines a quality in use model composed of eight characteristics\cite{iso250102011}, which we will use to analyse the quality of our code:
 \begin{itemize}
 \setlength{\itemsep}{0.25em}
 \item functional suitability
@@ -143,33 +140,25 @@ which we will use to analyse the quality of our code:
 \item portability
 \end{itemize}
 
-Agile teams often find the use of automated tools for code quality assurance important\cite{Williams:2012:ATT:2133806.2133823}, and we will try to evaluate how we can incorporate that into our testing\cite{ala2005survey}.
+Agile teams often find the use of automated tools for code quality assurance important \cite{Williams:2012:ATT:2133806.2133823}, and the use of automated testing tools as a method of evaluating code quality will also be examined \cite{ala2005survey}.
 
 \section{Method}
 
-We followed a team of X programmers during X weeks of development on a [briefly describe project]. During this time we acted as participating observers, taking part in group meetings and development.
+We followed a team of X programmers during Y weeks of development on a medium-sized project. During this time we acted as participating observers, taking part in group meetings and product development.
 
-The development period was divided in to week-long sprints. [describe sprints and tasks?] Task estimation and completion data was recorded for each sprint.
-We have participated as active [observants] in a group of developers during a period of X weeks. Every week has been it's own development sprint, with task estimation and completion data recorded for each week.
+The development period was divided into week-long sprints. Task estimates and completion data was recorded for each sprint. Half of the sprints began with a Planning Poker session. Remaining sprints utilised Expert Estimates instead. We opted to alternate between PP and EE every week, in order to minimise the progressive effects \cite{kjellberg2011experimentell}. This reduces the risk that the results would be scewed towards portraying either method differently due to it being used earlier or later in the development process.
+
+\subsection{Estimate Accuracy}
+In order to measure actual effort spent on tasks, each team member was asked to log his/her time spent using Toggl \cite{Toggl}]. This was then compared to the estimates, to produce the accuracy of estimates.
+
+\subsection{Code Quality}
+In order to measure Code Quality, we opted to use code review sessions at every sprint end. During code reviews, developers were asked to note how many times they experienced confusion when reviewing code written by others, and the number of errors they found in the code. Developers did not review their own code.
+We also used an automated code analysis tool, JSLint, to show syntactical errors.
+
+\subsection{Other metrics}
+At the end of each development sprint each team member answered a survey, where they rated their experience of the week and the work produced. They were also asked to estimate how accurate the estimates had been, and how enjoyable they found the planning method. The team members were also encouraged to comment with any additional thoughts on the process.
 
 
-Half of the sprints were initiated with a Planning Poker session. Remaining sprints utilised the team's pre-existing estimation technique [expert estimates?].
-
-Each week was also concluded with a code review session, where we tried to measure code quality using the aspects described above.
-
-We opted to alternate between the two methods every other week, in order to minimise the effects of [X bias]. This ensures that we would not be biased towards thinking that either method is better, only as a result of it being used earlier or later in the development process.
-In order to measure actual time spent on tasks, each team member was asked to log his/her time spent using [time logging method]. This was then compared to the estimates, to produce the accuracy of estimates.
-
-At the end of each development sprint each team member answered a survey, where they could rate their experience of the week and the work produced. They were also asked to estimate how accurate the estimates had been, and how enjoyable they found the planning method. The team members were also encouraged to comment with any additional thoughts on the process.
-The results from the survey were anValysed to see if there was any trends among the team members.
-
-\section{Conclusion}
-
-Our conclusion is that...
-
-\section{Acknowledgements}
-
-Thanks to the team at Briteback for allowing us to use them as Guinea Pigs.
 
 % Balancing columns in a ref list is a bit of a pain because you
 % either use a hack like flushend or balance, or manually insert
